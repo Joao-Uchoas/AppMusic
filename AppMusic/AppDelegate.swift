@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  AppMusicBF
-//
-//  Created by Caio on 06/10/21.
-//
-
 import UIKit
 
 @main

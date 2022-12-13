@@ -1,10 +1,3 @@
-//
-//  NSTextAttachment + Extension.swift
-//  AppMusicBF
-//
-//  Created by Caio on 06/10/21.
-//
-
 import Foundation
 import UIKit
 
