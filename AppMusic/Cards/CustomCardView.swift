@@ -105,7 +105,7 @@ class CustomCardView: UIView {
         return label
     }()
 
-    //data da categoria de musica
+    //titulo do card
     lazy var titleCardLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -179,8 +179,52 @@ class CustomCardView: UIView {
             containerLeadingConstraints?.constant = 30
             containerTrailingConstraints?.constant = -30
             descriptionLabel.isHidden = true
-
         }
+    }
+
+    private func setupConstraints() {
+
+        NSLayoutConstraint.activate([
+            cardContainerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
+            cardContainerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 15),
+            cardContainerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15),
+            cardContainerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30),
+
+            borderImageView.topAnchor.constraint(equalTo: cardContainerView.topAnchor, constant: 60),
+            borderImageView.centerXAnchor.constraint(equalTo: cardContainerView.centerXAnchor),
+            borderImageView.widthAnchor.constraint(equalToConstant: 50),
+            borderImageView.heightAnchor.constraint(equalToConstant: 50),
+
+            addProfileImageButton.trailingAnchor.constraint(equalTo: borderImageView.trailingAnchor, constant: 4),
+            addProfileImageButton.bottomAnchor.constraint(equalTo: borderImageView.bottomAnchor, constant: 4),
+            addProfileImageButton.widthAnchor.constraint(equalToConstant: 20),
+            addProfileImageButton.heightAnchor.constraint(equalToConstant: 20),
+
+            imageProfileView.centerXAnchor.constraint(equalTo: cardContainerView.centerXAnchor),
+            imageProfileView.centerYAnchor.constraint(equalTo: cardContainerView.centerYAnchor),
+            imageProfileView.widthAnchor.constraint(equalToConstant: 40),
+            imageProfileView.heightAnchor.constraint(equalToConstant: 40),
+
+            categoryCardLabel.topAnchor.constraint(equalTo: borderImageView.bottomAnchor, constant: 10),
+            categoryCardLabel.centerXAnchor.constraint(equalTo: cardContainerView.centerXAnchor),
+
+            dateCategoryCardLabel.topAnchor.constraint(equalTo: categoryCardLabel.topAnchor, constant: 2),
+            dateCategoryCardLabel.centerXAnchor.constraint(equalTo: cardContainerView.centerXAnchor),
+
+            titleCardLabel.topAnchor.constraint(equalTo: dateCategoryCardLabel.bottomAnchor, constant: 20),
+            titleCardLabel.leadingAnchor.constraint(equalTo: cardContainerView.leadingAnchor, constant: 20),
+            titleCardLabel.trailingAnchor.constraint(equalTo: cardContainerView.trailingAnchor, constant: -20),
+
+
+
+
+
+
+
+
+
+
+        ])
 
     }
 
