@@ -16,10 +16,12 @@
 		04C7023A270E2E6E00FF8A27 /* NSAttributedString + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C70237270E2E6E00FF8A27 /* NSAttributedString + Extension.swift */; };
 		04C7023B270E2E6E00FF8A27 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C70238270E2E6E00FF8A27 /* UIView + Extension.swift */; };
 		04C7023C270E2E6E00FF8A27 /* NSTextAttachment + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C70239270E2E6E00FF8A27 /* NSTextAttachment + Extension.swift */; };
+		72590AE92948C025000802B9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72590AE82948C025000802B9 /* HomeView.swift */; };
+		72590AEC294918FD000802B9 /* CustomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72590AEB294918FD000802B9 /* CustomCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04C7021C270E2A9200FF8A27 /* AppMusicBF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMusicBF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C7021C270E2A9200FF8A27 /* AppMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C7021F270E2A9300FF8A27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04C70221270E2A9300FF8A27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04C70223270E2A9300FF8A27 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		04C70237270E2E6E00FF8A27 /* NSAttributedString + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString + Extension.swift"; sourceTree = "<group>"; };
 		04C70238270E2E6E00FF8A27 /* UIView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		04C70239270E2E6E00FF8A27 /* NSTextAttachment + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment + Extension.swift"; sourceTree = "<group>"; };
+		72590AE82948C025000802B9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		72590AEB294918FD000802B9 /* CustomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,7 @@
 		04C7021D270E2A9200FF8A27 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04C7021C270E2A9200FF8A27 /* AppMusicBF.app */,
+				04C7021C270E2A9200FF8A27 /* AppMusic.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,7 +70,8 @@
 				04C70233270E2E6000FF8A27 /* Model */,
 				04C7021F270E2A9300FF8A27 /* AppDelegate.swift */,
 				04C70221270E2A9300FF8A27 /* SceneDelegate.swift */,
-				04C70223270E2A9300FF8A27 /* HomeViewController.swift */,
+				72590AEA294918A2000802B9 /* Cards */,
+				72590AE72948C002000802B9 /* Home */,
 				04C70228270E2AA300FF8A27 /* Assets.xcassets */,
 				04C7022A270E2AA300FF8A27 /* LaunchScreen.storyboard */,
 				04C7022D270E2AA300FF8A27 /* Info.plist */,
@@ -92,12 +97,29 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		72590AE72948C002000802B9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				04C70223270E2A9300FF8A27 /* HomeViewController.swift */,
+				72590AE82948C025000802B9 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		72590AEA294918A2000802B9 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				72590AEB294918FD000802B9 /* CustomCardView.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		04C7021B270E2A9200FF8A27 /* AppMusicBF */ = {
+		04C7021B270E2A9200FF8A27 /* AppMusic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04C70230270E2AA300FF8A27 /* Build configuration list for PBXNativeTarget "AppMusicBF" */;
+			buildConfigurationList = 04C70230270E2AA300FF8A27 /* Build configuration list for PBXNativeTarget "AppMusic" */;
 			buildPhases = (
 				04C70218270E2A9200FF8A27 /* Sources */,
 				04C70219270E2A9200FF8A27 /* Frameworks */,
@@ -107,9 +129,9 @@
 			);
 			dependencies = (
 			);
-			name = AppMusicBF;
+			name = AppMusic;
 			productName = AppMusicBF;
-			productReference = 04C7021C270E2A9200FF8A27 /* AppMusicBF.app */;
+			productReference = 04C7021C270E2A9200FF8A27 /* AppMusic.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -140,7 +162,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04C7021B270E2A9200FF8A27 /* AppMusicBF */,
+				04C7021B270E2A9200FF8A27 /* AppMusic */,
 			);
 		};
 /* End PBXProject section */
@@ -167,8 +189,10 @@
 				04C7023C270E2E6E00FF8A27 /* NSTextAttachment + Extension.swift in Sources */,
 				04C7023B270E2E6E00FF8A27 /* UIView + Extension.swift in Sources */,
 				04C70220270E2A9300FF8A27 /* AppDelegate.swift in Sources */,
+				72590AE92948C025000802B9 /* HomeView.swift in Sources */,
 				04C7023A270E2E6E00FF8A27 /* NSAttributedString + Extension.swift in Sources */,
 				04C70222270E2A9300FF8A27 /* SceneDelegate.swift in Sources */,
+				72590AEC294918FD000802B9 /* CustomCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AppMusicBF/Info.plist;
+				INFOPLIST_FILE = AppMusic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -336,7 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AppMusicBF/Info.plist;
+				INFOPLIST_FILE = AppMusic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -366,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04C70230270E2AA300FF8A27 /* Build configuration list for PBXNativeTarget "AppMusicBF" */ = {
+		04C70230270E2AA300FF8A27 /* Build configuration list for PBXNativeTarget "AppMusic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04C70231270E2AA300FF8A27 /* Debug */,
