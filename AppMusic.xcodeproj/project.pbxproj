@@ -16,6 +16,7 @@
 		04C7023A270E2E6E00FF8A27 /* NSAttributedString + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C70237270E2E6E00FF8A27 /* NSAttributedString + Extension.swift */; };
 		04C7023B270E2E6E00FF8A27 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C70238270E2E6E00FF8A27 /* UIView + Extension.swift */; };
 		04C7023C270E2E6E00FF8A27 /* NSTextAttachment + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C70239270E2E6E00FF8A27 /* NSTextAttachment + Extension.swift */; };
+		72500E07294B5F49006DBE92 /* ActionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72500E06294B5F49006DBE92 /* ActionCardView.swift */; };
 		72590AE92948C025000802B9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72590AE82948C025000802B9 /* HomeView.swift */; };
 		72590AEC294918FD000802B9 /* CustomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72590AEB294918FD000802B9 /* CustomCardView.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		04C70237270E2E6E00FF8A27 /* NSAttributedString + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString + Extension.swift"; sourceTree = "<group>"; };
 		04C70238270E2E6E00FF8A27 /* UIView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		04C70239270E2E6E00FF8A27 /* NSTextAttachment + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment + Extension.swift"; sourceTree = "<group>"; };
+		72500E06294B5F49006DBE92 /* ActionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCardView.swift; sourceTree = "<group>"; };
 		72590AE82948C025000802B9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		72590AEB294918FD000802B9 /* CustomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				72590AEB294918FD000802B9 /* CustomCardView.swift */,
+				72500E06294B5F49006DBE92 /* ActionCardView.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				04C70224270E2A9300FF8A27 /* HomeViewController.swift in Sources */,
 				04C7023C270E2E6E00FF8A27 /* NSTextAttachment + Extension.swift in Sources */,
 				04C7023B270E2E6E00FF8A27 /* UIView + Extension.swift in Sources */,
+				72500E07294B5F49006DBE92 /* ActionCardView.swift in Sources */,
 				04C70220270E2A9300FF8A27 /* AppDelegate.swift in Sources */,
 				72590AE92948C025000802B9 /* HomeView.swift in Sources */,
 				04C7023A270E2E6E00FF8A27 /* NSAttributedString + Extension.swift in Sources */,
