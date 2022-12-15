@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .blue
 
     }
 
@@ -31,15 +31,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: HomeView.Cell.identifier, for: indexPath) as? HomeView.Cell
+        cell?.setupCell(data:  CardData[indexPath.row])
+        return cell ?? UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
 
-    func tableView(_ tableView: UITableView, hightForRowAt indexPath: IndexPath) -> CGFloat {
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 500
     }
 
