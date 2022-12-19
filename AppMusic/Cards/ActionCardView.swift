@@ -13,6 +13,7 @@ class ActionCardView: UIView {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
+        stack.distribution = .fillEqually
         return stack
     }()
 
@@ -75,7 +76,7 @@ class ActionCardView: UIView {
         button.tintColor = .black
         button.backgroundColor = .white
         button.setBackgroundImage(UIImage(named: "playBtn")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        button.layer.cornerRadius = 25
+        button.layer.cornerRadius = 35
         return button
     }()
 
@@ -103,6 +104,8 @@ class ActionCardView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        buildHierarchy()
+        constraint()
     }
 
     required init?(coder: NSCoder) {
@@ -111,14 +114,65 @@ class ActionCardView: UIView {
 
 
     private func buildHierarchy(){
-        addSubview(stackView)
+        self.addSubview(stackView)
+
         stackView.addArrangedSubview(downloadView)
-        stackView.addArrangedSubview(notInterestedView)
-        stackView.addArrangedSubview(playView)
-        stackView.addArrangedSubview(likeView)
+        self.stackView.addArrangedSubview(notInterestedView)
+        self.stackView.addArrangedSubview(playView)
+        self.stackView.addArrangedSubview(likeView)
         stackView.addArrangedSubview(moreView)
 
 
+        self.downloadView.addSubview(downloadButton)
+        self.notInterestedView.addSubview(notInterestButton)
+        self.playView.addSubview(playButton)
+        self.likeView.addSubview(likeButton)
+        self.moreView.addSubview(moreButton)
     }
+
+    private func constraint(){
+        stackView.pin(to: self)
+        NSLayoutConstraint.activate([
+            downloadButton.centerXAnchor.constraint(equalTo: downloadView.centerXAnchor),
+            downloadButton.centerYAnchor.constraint(equalTo: downloadView.centerYAnchor),
+            downloadButton.widthAnchor.constraint(equalToConstant: 45),
+            downloadButton.heightAnchor.constraint(equalToConstant: 45),
+
+            notInterestButton.centerXAnchor.constraint(equalTo: notInterestedView.centerXAnchor),
+            notInterestButton.centerYAnchor.constraint(equalTo: notInterestedView.centerYAnchor),
+            notInterestButton.widthAnchor.constraint(equalToConstant: 45),
+            notInterestButton.heightAnchor.constraint(equalToConstant: 45),
+
+            playButton.centerXAnchor.constraint(equalTo: playView.centerXAnchor),
+            playButton.centerYAnchor.constraint(equalTo: playView.centerYAnchor),
+            playButton.widthAnchor.constraint(equalToConstant: 70),
+            playButton.heightAnchor.constraint(equalToConstant: 70),
+
+            likeButton.centerXAnchor.constraint(equalTo: likeView.centerXAnchor),
+            likeButton.centerYAnchor.constraint(equalTo: likeView.centerYAnchor),
+            likeButton.widthAnchor.constraint(equalToConstant: 45),
+            likeButton.heightAnchor.constraint(equalToConstant: 45),
+
+            moreButton.centerXAnchor.constraint(equalTo: moreView.centerXAnchor),
+            moreButton.centerYAnchor.constraint(equalTo: moreView.centerYAnchor),
+            moreButton.widthAnchor.constraint(equalToConstant: 45),
+            moreButton.heightAnchor.constraint(equalToConstant: 45)
+
+        ])
+    }
+
+    public func updateLayout(for status: Status){
+        switch status {
+        case .full:
+            downloadView.isHidden = false
+            moreView.isHidden = false
+        case .card:
+            downloadView.isHidden = true
+            moreView.isHidden = true
+            break
+        }
+
+    }
+
 
 }

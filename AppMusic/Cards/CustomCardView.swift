@@ -134,14 +134,21 @@ class CustomCardView: UIView {
         return label
     }()
 
+    lazy var actionView: ActionCardView = {
+        let view = ActionCardView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+
     //MARK: - Inicializador
 
     init() {
         let frame = CGRect.zero
         super.init(frame: frame)
         hierarchyConfiguration()
-//        self.setupLayout(for: self.status ?? .card)
         setupConstraints()
+        self.setupLayout(for: self.status ?? .card)
     }
     
     required init?(coder: NSCoder) {
@@ -162,7 +169,7 @@ class CustomCardView: UIView {
         self.cardContainerView.addSubview(self.titleCardLabel)
         self.cardContainerView.addSubview(self.likeAndTimeLabel)
         self.cardContainerView.addSubview(self.descriptionLabel)
-        self.setupLayout(for: self.status ?? .card)
+        self.cardContainerView.addSubview(self.actionView)
     }
 
     //MARK: - Setups
@@ -181,6 +188,7 @@ class CustomCardView: UIView {
             containerTrailingConstraints?.constant = -30
             descriptionLabel.isHidden = true
         }
+        actionView.updateLayout(for: status)
     }
 
     private func setupConstraints() {
@@ -231,7 +239,12 @@ class CustomCardView: UIView {
 
             descriptionLabel.topAnchor.constraint(equalTo: likeAndTimeLabel.bottomAnchor, constant: 30),
             descriptionLabel.leadingAnchor.constraint(equalTo: cardContainerView.leadingAnchor, constant: 40),
-            descriptionLabel.trailingAnchor.constraint(equalTo: cardContainerView.trailingAnchor, constant: -40)
+            descriptionLabel.trailingAnchor.constraint(equalTo: cardContainerView.trailingAnchor, constant: -40),
+
+            actionView.bottomAnchor.constraint(equalTo: cardContainerView.bottomAnchor, constant: -20),
+            actionView.leadingAnchor.constraint(equalTo: cardContainerView.leadingAnchor, constant: 20),
+            actionView.trailingAnchor.constraint(equalTo: cardContainerView.trailingAnchor, constant: -20),
+            actionView.heightAnchor.constraint(equalToConstant: 80)
         ])
     }
 
@@ -243,7 +256,6 @@ class CustomCardView: UIView {
         self.descriptionLabel.text = data.cardDescription
         self.imageView.image = UIImage(named: data.cardImage ?? "")
         self.imageProfileView.image = UIImage(named: data.categoryImage ?? "")
-
     }
 
 
