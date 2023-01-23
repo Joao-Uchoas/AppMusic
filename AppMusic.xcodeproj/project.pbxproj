@@ -16,6 +16,8 @@
 		04C7023A270E2E6E00FF8A27 /* NSAttributedString + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C70237270E2E6E00FF8A27 /* NSAttributedString + Extension.swift */; };
 		04C7023B270E2E6E00FF8A27 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C70238270E2E6E00FF8A27 /* UIView + Extension.swift */; };
 		04C7023C270E2E6E00FF8A27 /* NSTextAttachment + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C70239270E2E6E00FF8A27 /* NSTextAttachment + Extension.swift */; };
+		720991C829524B9C005950F7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720991C729524B9C005950F7 /* DetailsViewController.swift */; };
+		720991CA29524BB4005950F7 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720991C929524BB4005950F7 /* DetailsView.swift */; };
 		72500E07294B5F49006DBE92 /* ActionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72500E06294B5F49006DBE92 /* ActionCardView.swift */; };
 		72590AE92948C025000802B9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72590AE82948C025000802B9 /* HomeView.swift */; };
 		72590AEC294918FD000802B9 /* CustomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72590AEB294918FD000802B9 /* CustomCardView.swift */; };
@@ -33,6 +35,8 @@
 		04C70237270E2E6E00FF8A27 /* NSAttributedString + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString + Extension.swift"; sourceTree = "<group>"; };
 		04C70238270E2E6E00FF8A27 /* UIView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		04C70239270E2E6E00FF8A27 /* NSTextAttachment + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment + Extension.swift"; sourceTree = "<group>"; };
+		720991C729524B9C005950F7 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		720991C929524BB4005950F7 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		72500E06294B5F49006DBE92 /* ActionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCardView.swift; sourceTree = "<group>"; };
 		72590AE82948C025000802B9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		72590AEB294918FD000802B9 /* CustomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardView.swift; sourceTree = "<group>"; };
@@ -69,9 +73,10 @@
 			isa = PBXGroup;
 			children = (
 				04C70236270E2E6E00FF8A27 /* Extension */,
-				04C70233270E2E6000FF8A27 /* Model */,
 				04C7021F270E2A9300FF8A27 /* AppDelegate.swift */,
 				04C70221270E2A9300FF8A27 /* SceneDelegate.swift */,
+				720991C629524B5C005950F7 /* Details */,
+				04C70233270E2E6000FF8A27 /* Model */,
 				72590AEA294918A2000802B9 /* Cards */,
 				72590AE72948C002000802B9 /* Home */,
 				04C70228270E2AA300FF8A27 /* Assets.xcassets */,
@@ -97,6 +102,15 @@
 				04C70239270E2E6E00FF8A27 /* NSTextAttachment + Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		720991C629524B5C005950F7 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				720991C729524B9C005950F7 /* DetailsViewController.swift */,
+				720991C929524BB4005950F7 /* DetailsView.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		72590AE72948C002000802B9 /* Home */ = {
@@ -190,7 +204,9 @@
 				04C70235270E2E6100FF8A27 /* CardViewModel.swift in Sources */,
 				04C70224270E2A9300FF8A27 /* HomeViewController.swift in Sources */,
 				04C7023C270E2E6E00FF8A27 /* NSTextAttachment + Extension.swift in Sources */,
+				720991C829524B9C005950F7 /* DetailsViewController.swift in Sources */,
 				04C7023B270E2E6E00FF8A27 /* UIView + Extension.swift in Sources */,
+				720991CA29524BB4005950F7 /* DetailsView.swift in Sources */,
 				72500E07294B5F49006DBE92 /* ActionCardView.swift in Sources */,
 				04C70220270E2A9300FF8A27 /* AppDelegate.swift in Sources */,
 				72590AE92948C025000802B9 /* HomeView.swift in Sources */,

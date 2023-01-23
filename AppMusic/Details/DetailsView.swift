@@ -9,12 +9,26 @@ import UIKit
 
 class DetailsView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    var cardMode: CardViewModel?
+
+
+    lazy var scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.translatesAutoresizingMaskIntoConstraints = false
+        scroll.showsHorizontalScrollIndicator = false
+        scroll.showsVerticalScrollIndicator = false
+        scroll.autoresizingMask = .flexibleHeight
+        scroll.clipsToBounds = true
+        scroll.bounces = false
+        return scroll
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
     }
-    */
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
 }
